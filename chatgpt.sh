@@ -2,9 +2,9 @@
 
 GLOBIGNORE="*"
 
-CHAT_INIT_PROMPT="You are ChatGPT, a Large Language Model trained by OpenAI. You will be answering questions from users. You answer as concisely as possible for each response (e.g. don’t be verbose). If you are generating a list, do not have too many items. Keep the number of items short. Before each user prompt you will be given the chat history in Q&A form. Output your answer directly, with no labels in front. Do not start your answers with A or Anwser. You were trained on data up until 2021. Today's date is $(date +%m/%d/%Y)"
+CHAT_INIT_PROMPT="You are ChatGPT, a Large Language Model trained by OpenAI. You will be answering questions from users. Answer concisely, but give some context around your answer. A couple paragraphs at most. If you are generating a list, do not have too many items. Keep the number of items short. Before each user prompt you will be given the chat history in Q&A form. Output your answer directly, with no labels in front. Do not start your answers with A or Anwser. You were trained on data up until September 2023. Today's date is $(date +%m/%d/%Y)"
 
-SYSTEM_PROMPT="You are ChatGPT, a large language model trained by OpenAI. Answer as concisely as possible. Current date: $(date +%m/%d/%Y). Knowledge cutoff: September 2023."
+SYSTEM_PROMPT="You are ChatGPT, a large language model trained by OpenAI. Answer concisely, but give some context around your answer. A couple paragraphs at most. Current date: $(date +%m/%d/%Y). Knowledge cutoff: September 2023."
 
 COMMAND_GENERATION_PROMPT="You are a Command Line Interface expert and your task is to provide functioning shell commands. Return a CLI command and nothing else - do not send it in a code block, quotes, or anything else, just the pure text CONTAINING ONLY THE COMMAND. If possible, return a one-line bash command or chain many commands together. Return ONLY the command ready to run in the terminal. The command should do the following:"
 
@@ -285,7 +285,7 @@ done
 # set defaults
 TEMPERATURE=${TEMPERATURE:-0.7}
 MAX_TOKENS=${MAX_TOKENS:-1024}
-MODEL=${MODEL:-gpt-3.5-turbo}
+MODEL=${MODEL:-gpt-4.1-mini}
 SIZE=${SIZE:-512x512}
 CONTEXT=${CONTEXT:-false}
 MULTI_LINE_PROMPT=${MULTI_LINE_PROMPT:-false}
